@@ -18,7 +18,7 @@
             <article class="post">
               <!-- automatically figures out what the link should be -->
               <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-              <h2><?php echo strip_tags( get_the_excerpt() ); ?></h2>
+
               <ul class="post-meta no-bullet">
                 <li class="author">
                     <span class="wpt-avatar small">
@@ -33,6 +33,7 @@
                 <!-- displays the date for all posts, even if they're posted on the same day, otherwise date doesn't print -->
                 <li class="date">on <?php the_time('F j, Y'); ?></li>
               </ul>
+
               <?php if( get_the_post_thumbnail() ) : ?>
 
                 <div class="img-container">
@@ -40,6 +41,9 @@
                 </div>
 
               <?php endif; ?>
+
+              <?php the_content(); ?>
+
             </article>
 
           <?php endwhile; else : ?>
