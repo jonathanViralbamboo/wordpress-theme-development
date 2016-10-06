@@ -3,6 +3,14 @@
 add_theme_support('menus');
 add_theme_support('post-thumbnails');
 
+
+//Manages length of excerpt
+function wpt_excerpt_length($length) {
+	return 16;
+}
+//999 makes the process come much later incase there's something before overriding it
+add_filter('excerpt_length', 'wpt_excerpt_length', 999);
+
 function register_theme_menus() {
 	register_nav_menus(
 		array(
