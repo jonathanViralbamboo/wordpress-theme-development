@@ -43,12 +43,14 @@
               <?php endif; ?>
 
               <?php the_content(); ?>
+              <?php comments_template(); ?>
 
             </article>
 
           <?php endwhile; else : ?>
             <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
           <?php endif; ?>
+
         </div>
       </div>
 
