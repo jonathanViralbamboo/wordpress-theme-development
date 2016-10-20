@@ -1,8 +1,4 @@
-<?php
-/*
-  Template Name: Left Sidebar
-*/
-?>
+
 <!-- home.php is the name for default blogs -->
 <?php get_header(); ?>
 
@@ -48,12 +44,8 @@
         </div>
       </div>
 
-      <!-- Secondary Column -->
-      <div class="small-12 medium-4 medium-pull-8 columns">
-        <div class="secondary">
-          <h2 class="module-heading">Sidebar</h2>
-        </div>
-      </div>
+      <?php get_sidebar(); ?>
+
     </div>
   </div>
 </section>
